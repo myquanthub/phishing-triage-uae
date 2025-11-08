@@ -15,3 +15,6 @@
 | **Total** | **8** | **20K  35K**
 
 *Deploy to 5 orgs = **175K AED value***
+
+
+NESA IAS 9.2 Mapping: View here – Ensures P1 compliance for UAE critical infra
