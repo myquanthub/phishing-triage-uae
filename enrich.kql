@@ -1,0 +1,4 @@
+﻿SecurityIncident
+| where Title contains "Phishing"
+| extend Org = case(Title contains "Emirates", "Aviation", Title contains "ADNOC", "Energy", "Other")
+| project TimeGenerated, Title, Severity, Org
