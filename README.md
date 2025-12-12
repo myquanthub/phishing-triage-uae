@@ -56,3 +56,6 @@ az securityinsights data-connector create \
   --workspace-name law-phishing-emirates \
   --kind MicrosoftSecurityIncidentCreation \
   --display-name "Phishing Auto-Incident"
+### Step 4: Create Phishing Incident
+```bash
+# Portal: Sentinel → Incidents → + New incident
