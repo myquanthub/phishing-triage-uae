@@ -27,3 +27,32 @@ Run in UAE North (NESA data sovereignty compliant).
 ### Step 1: Azure Login
 ```bash
 az login --use-device-code
+
+### Step 2: Create Resource Group + Log Analytics Workspace (LAW)
+```bash
+# Create RG in UAE North (available & NESA-compliant)
+az group create \
+  --name rg-phishing-emirates \
+  --location uaenorth \
+  --tags Project=phishing-triage-uae NESA=IR-04 Owner=you@emirates.ae
+
+# Create LAW
+az monitor log-analytics workspace create \
+  --resource-group rg-phishing-emirates \
+  --workspace-name law-phishing-emirates \
+  --location uaenorth \
+  --retention-time 90 \
+  --query provisioningState -o tsv
+### Step 3: Enable Microsoft Sentinel
+**Portal (Recommended):**  
+1. Azure Portal → Search "Microsoft Sentinel" → Create → Select `law-phishing-emirates` → Add  
+2. Wait 30s → "Active" status  
+
+**CLI (Connectors Only – After Extension Install):**  
+```bash
+az extension add --name security-insights
+az securityinsights data-connector create \
+  --resource-group rg-phishing-emirates \
+  --workspace-name law-phishing-emirates \
+  --kind MicrosoftSecurityIncidentCreation \
+  --display-name "Phishing Auto-Incident"
