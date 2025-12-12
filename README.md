@@ -59,3 +59,11 @@ az securityinsights data-connector create \
 ### Step 4: Create Phishing Incident
 ```bash
 # Portal: Sentinel → Incidents → + New incident
+
+---
+
+### Add Incident ID (For KQL Later)
+
+```bash
+# After creation, copy the Incident Number (e.g., 12345)
+echo "Incident #12345" >> 06-evidence/incident-id.txt
