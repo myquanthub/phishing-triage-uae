@@ -1,0 +1,22 @@
+From: booking@emirates-secure.com
+To: user@emirates.ae
+Subject: Urgent: Confirm Your Flight Booking – Action Required
+Date: Fri, 13 Dec 2025 10:30:00 +0400
+MIME-Version: 1.0
+Content-Type: text/html; charset="utf-8"
+
+<html>
+<body>
+<p>Dear Valued Emirates Customer,</p>
+<p>We detected unusual activity on your booking EK1234.</p>
+<p>Please <strong>confirm your booking immediately</strong> to avoid cancellation:</p>
+<p style="text-align:center">
+  <a href="http://emirates-booking-scam.phish/login?id=9X7K2P" 
+     style="background:#d71921;color:white;padding:15px 30px;text-decoration:none;font-size:18px;border-radius:5px;">
+     CONFIRM MY BOOKING NOW
+  </a>
+</p>
+<p>If you did not make this booking, ignore this email.</p>
+<p>Thank you,<br>Emirates Customer Service</p>
+</body>
+</html>
